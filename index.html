@@ -11,15 +11,65 @@
 
 </head>
 <body>
-    <h1 class="text-center">Welcome to Pioneer Bank</h1>
+    
     <!--//?submit area-->
     <div id="login-area">
-        
+        <h1 class="text-center">Welcome to Pioneer Bank</h1>
         <div class="submit-area">
-        <input type="text" class="form-control" placeholder="Email"> <br>
-        <input type="password" class="form-control" name="" id="" placeholder="Password">
-        <br>
-        <button id="login" class="btn btn-success">Login</button>
+
+            <input type="text" class="form-control" placeholder="Email"> <br>
+            <input type="password" class="form-control" name="" id="" placeholder="Password">
+            <br>
+            <button id="login" class="btn btn-success">Login</button>
+        </div>
+    </div>
+
+
+    <div id="transaction-area" >
+        <div class="row">
+            <div class="col-md-4 deposit">
+                <div class="diposit status">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-3 withdraw">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4 balance">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$120</h2>
+                </div>
+            </div>
+        </div>
+        <!--//*another row-->
+        <div class="row">
+        <div class="col-md-5">
+            <div class="submit-area">
+             <h4>Deposit</h4>
+            <input id="depoam" type="text" class="form-control" placeholder="$ Amount deposit">
+            <br>
+            <button id="addepo"  class="btn btn-success">
+             Deposit
+            </button>
+            </div>
+        </div>
+        <div class="row col-md-5">
+            <div class="submit-area">
+                <h4>Withdraw</h4>
+            <input type="text" class="form-control" placeholder="Withdraw money">
+            <br>
+            <button class="btn btn-success">
+                Withdraw
+            </button>
+            </div>
+        </div>
+        </div>
+    </div>
 
         
         <script>
@@ -29,10 +79,21 @@
            loginBtn.addEventListener("click",function(){   
                const loginArea=document.getElementById("login-area");
                loginArea.style.display="none";
+               const TransactionArea=document.getElementById("transaction-area");
+               TransactionArea.style.display="block";
            })
+
+           //deposit button handler
+          const depositBtn = document.getElementById("addepo");
+          depositBtn.addEventListener("click",function(){
+              const depoam=document.getElementById("depoam").value;
+              const deponum=parseFloat(depoam);
+
+          })
         </script>
-        </div>
-        </div>
+        
+        
+        
 
     
 </body>
